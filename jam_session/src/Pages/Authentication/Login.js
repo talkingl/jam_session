@@ -1,10 +1,15 @@
+import { useNavigate } from "react-router-dom";
+
 function Login() {
-    return (
-      <div>
-        <h1> Login </h1>
-      </div>
-    );
+  const navigate = useNavigate();
+  function login() {
+    navigate("/timeline");
   }
-  
-  export default Login;
-  
+  return (
+    <div>
+      <button onClick={login}> Login </button>
+    </div>
+  );
+}
+
+export default Login;
